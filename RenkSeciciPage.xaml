@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BSM322_Odev2_SumeyyeCakir.RenkSeciciPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#FFF7F0"
+    Title="Renk Seçici">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="28">
+
+            <!-- başlık -->
+            <Label Text="Renk Seçici"
+                   FontSize="26"
+                   TextColor="#6A4CAD"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+
+            <!-- kırmızı -->
+            <Label Text="Kırmızı (R)" FontSize="18" TextColor="#4A4A4A"/>
+            <Slider x:Name="sliderRed" Minimum="0" Maximum="255" ValueChanged="Renk_ValueChanged"/>
+            <Label x:Name="labelRed" Text="R: 0" FontSize="16" TextColor="#4A4A4A"/>
+
+            <!-- yeşil -->
+            <Label Text="Yeşil (G)" FontSize="18" TextColor="#4A4A4A"/>
+            <Slider x:Name="sliderGreen" Minimum="0" Maximum="255" ValueChanged="Renk_ValueChanged"/>
+            <Label x:Name="labelGreen" Text="G: 0" FontSize="16" TextColor="#4A4A4A"/>
+
+            <!-- mavi -->
+            <Label Text="Mavi (B)" FontSize="18" TextColor="#4A4A4A"/>
+            <Slider x:Name="sliderBlue" Minimum="0" Maximum="255" ValueChanged="Renk_ValueChanged"/>
+            <Label x:Name="labelBlue" Text="B: 0" FontSize="16" TextColor="#4A4A4A"/>
+
+            <!-- hex gösterimi -->
+            <Border
+                BackgroundColor="#FFDAD2"
+                Padding="15"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 12"
+                HorizontalOptions="Fill">
+
+                
+
+                <Label
+                    x:Name="labelHex"
+                    Text="#000000"
+                    FontSize="22"
+                    FontAttributes="Bold"
+                    TextColor="#8A3A2E"
+                    HorizontalOptions="Center"/>
+            </Border>
+
+            <!-- butonlar -->
+            <Button Text="Kopyala"
+                    Clicked="btnKopyala_Clicked"
+                    BackgroundColor="#FF7043"
+                    TextColor="White"
+                    CornerRadius="12"/>
+
+            <Button Text="Rastgele Renk"
+                    Clicked="btnRastgele_Clicked"
+                    BackgroundColor="#6A4CAD"
+                    TextColor="White"
+                    CornerRadius="12"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

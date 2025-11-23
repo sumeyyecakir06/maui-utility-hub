@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BSM322_Odev2_SumeyyeCakir.KrediHesaplamaPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Kredi Hesaplama"
+    BackgroundColor="#FFF7F0">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="28">
+
+            <!-- sayfa başlığı -->
+            <Label Text="Kredi Hesaplama"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="#6A4CAD"
+                   HorizontalOptions="Center"/>
+
+            
+
+            <!-- kredi türü -->
+            <Label Text="Kredi Türü"
+                   FontSize="18"
+                   TextColor="#4A4A4A"
+                   Margin="0,10,0,0"/>
+
+            <Picker x:Name="pickerKrediTuru"
+                    Title="Seçiniz"
+                    TextColor="#4A4A4A">
+                <Picker.Items>
+                    <x:String>İhtiyaç Kredisi</x:String>
+                    <x:String>Konut Kredisi</x:String>
+                    <x:String>Taşıt Kredisi</x:String>
+                    <x:String>Ticari Kredi</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <!-- kredi tutarı -->
+            <Label Text="Kredi Tutarı (TL)"
+                   FontSize="18"
+                   TextColor="#4A4A4A"/>
+
+            <Entry x:Name="entryTutar"
+                   Keyboard="Numeric"
+                   Placeholder="örn. 100000"
+                   BackgroundColor="#FFFFFF"
+                   TextColor="#4A4A4A"
+                   PlaceholderColor="#9E9E9E"/>
+
+            <!-- faiz oranı -->
+            <Label Text="Faiz Oranı (%)"
+                   FontSize="18"
+                   TextColor="#4A4A4A"/>
+
+            <Entry x:Name="entryFaiz"
+                   Keyboard="Numeric"
+                   Placeholder="örn. 1.39"
+                   BackgroundColor="#FFFFFF"
+                   TextColor="#4A4A4A"
+                   PlaceholderColor="#9E9E9E"/>
+
+            <!-- vade -->
+            <Label Text="Vade (Ay)"
+                   FontSize="18"
+                   TextColor="#4A4A4A"/>
+
+            <Slider x:Name="sliderVade"
+                    Minimum="1"
+                    Maximum="60"
+                    Value="1"
+                    ValueChanged="sliderVade_ValueChanged"/>
+
+            <Label x:Name="labelVade"
+                   Text="1 Ay"
+                   FontSize="16"
+                   TextColor="#4A4A4A"/>
+
+            <!-- sonuç kartı -->
+            <Border
+                BackgroundColor="#FFDAD2"
+                Padding="20"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 18"
+                Margin="0,10,0,0">
+
+                
+
+                <VerticalStackLayout Spacing="8">
+                    <Label x:Name="labelAylikTaksit"
+                           Text="Aylık Taksit: -"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#8A3A2E"/>
+
+                    <Label x:Name="labelToplamOdeme"
+                           Text="Toplam Ödeme: -"
+                           FontSize="18"
+                           TextColor="#8A3A2E"/>
+
+                    <Label x:Name="labelFaizYuku"
+                           Text="Toplam Faiz: -"
+                           FontSize="18"
+                           TextColor="#8A3A2E"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- hesapla butonu -->
+            <Button Text="Hesapla"
+                    Clicked="btnHesapla_Clicked"
+                    BackgroundColor="#6A4CAD"
+                    TextColor="White"
+                    CornerRadius="14"
+                    FontSize="20"
+                    Margin="0,10,0,25"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

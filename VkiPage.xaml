@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BSM322_Odev2_SumeyyeCakir.VkiPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="VKİ Hesaplama"
+    BackgroundColor="#FFF7F0">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="25">
+
+            <!-- kilo -->
+            <Label Text="Kilo (kg)" FontSize="18" TextColor="#4A4A4A"/>
+            <Entry x:Name="entryKilo"
+                   Keyboard="Numeric"
+                   Placeholder="Örn: 70.50"
+                   TextChanged="entryKilo_TextChanged"
+                   BackgroundColor="White"
+                   Margin="0,0,0,5"/>
+
+           
+            <Slider x:Name="sliderKilo"
+                    Minimum="0"
+                    Maximum="30000"
+                    ValueChanged="sliderKilo_ValueChanged"/>
+
+            <Label x:Name="labelKilo"
+                   Text="0 kg"
+                   FontSize="16"
+                   TextColor="#4A4A4A"/>
+
+            <!-- boy -->
+            <Label Text="Boy (cm)" FontSize="18" TextColor="#4A4A4A"/>
+            <Entry x:Name="entryBoy"
+                   Keyboard="Numeric"
+                   Placeholder="Örn: 175.80"
+                   TextChanged="entryBoy_TextChanged"
+                   BackgroundColor="White"
+                   Margin="0,0,0,5"/>
+
+            <Slider x:Name="sliderBoy"
+                    Minimum="0"
+                    Maximum="30000"
+                    ValueChanged="sliderBoy_ValueChanged"/>
+
+            <Label x:Name="labelBoy"
+                   Text="0 cm"
+                   FontSize="16"
+                   TextColor="#4A4A4A"/>
+
+            <!-- sonuç kutusu -->
+            <Border
+                BackgroundColor="#FFE8D6"
+                Padding="15"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 12"
+                Margin="0,15,0,0">
+
+                <VerticalStackLayout>
+                    <Label x:Name="labelVki"
+                           Text="VKİ: -"
+                           FontSize="22"
+                           FontAttributes="Bold"
+                           TextColor="#6A4CAD"/>
+
+                    <Label x:Name="labelDurum"
+                           Text="Durum: -"
+                           FontSize="18"
+                           TextColor="#4A4A4A"/>
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

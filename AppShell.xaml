@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- app shell yapısı -->
+<Shell
+    x:Class="BSM322_Odev2_SumeyyeCakir.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:BSM322_Odev2_SumeyyeCakir">
+
+    <!-- ana sayfa menüsü -->
+    <FlyoutItem 
+        Title="Ana Sayfa"
+        Icon="icon_home.png">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+
+    <!-- kredi hesaplama menüsü -->
+    <FlyoutItem
+        Title="Kredi Hesaplama"
+        Icon="icon_kredi.png">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:KrediHesaplamaPage}" />
+    </FlyoutItem>
+
+    <!-- vki hesaplama menüsü -->
+    <FlyoutItem
+        Title="VKİ Hesaplama"
+        Icon="icon_vki.png">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:VkiPage}" />
+    </FlyoutItem>
+
+    <!-- renk seçici menüsü -->
+    <FlyoutItem
+        Title="Renk Seçici"
+        Icon="icon_renk.png">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:RenkSeciciPage}" />
+    </FlyoutItem>
+
+</Shell>

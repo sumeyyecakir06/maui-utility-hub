@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BSM322_Odev2_SumeyyeCakir.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#FFF7F0"
+    Title="Ana Sayfa">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30"
+            Spacing="25"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+
+            <!-- profil alanı -->
+            <Grid
+                WidthRequest="180"
+                HeightRequest="180"
+                HorizontalOptions="Center"
+                Margin="0,25,0,10">
+
+                <!-- çerçeve -->
+                <Border
+                    Stroke="#D9C1B1"
+                    StrokeThickness="3"
+                    BackgroundColor="Transparent"
+                    StrokeShape="RoundRectangle 20">
+                  
+                </Border>
+
+                <!-- fotoğraf -->
+                <Image
+                    Source="sumeyye.png"
+                    Aspect="AspectFill"
+                    HeightRequest="180"
+                    WidthRequest="180"
+                    Margin="3"/>
+            </Grid>
+
+            <!-- ad soyad -->
+            <Label
+                Text="Sümeyye Çakır"
+                FontSize="30"
+                FontAttributes="Bold"
+                TextColor="#6A4CAD"
+                HorizontalOptions="Center"/>
+
+           
+
+            <!-- bölüm -->
+            <Label
+                Text="Bartın Üniversitesi&#10;Bilgisayar Mühendisliği"
+                FontSize="18"
+                TextColor="#4A4A4A"
+                HorizontalTextAlignment="Center"
+                Margin="0,10,0,0"/>
+
+            <!-- ödev bilgisi -->
+            <Label
+                Text="ÖDEV - 2"
+                FontSize="22"
+                FontAttributes="Bold"
+                TextColor="#FF7043"
+                HorizontalOptions="Center"
+                Margin="0,10,0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
